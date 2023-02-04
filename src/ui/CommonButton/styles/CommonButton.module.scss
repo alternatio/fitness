@@ -1,0 +1,22 @@
+@import '/styles/variables';
+
+.button {
+	background: $black;
+	color: $white;
+	border-radius: $mediumBorderRadius;
+	padding: $smallPadding $mediumPadding;
+	width: fit-content;
+	@include cubicTransition(0.33s);
+	&:hover:not(:disabled) {
+		@include buttonCommonHover(1.05, 0.95, translateY(-.2rem));
+		@include cubicTransition(0.25s);
+	}
+	&:active:not(:disabled) {
+		@include buttonCommonHover(1.05, 0.95, translateY(0rem));
+		@include cubicTransition(0.1s);
+	}
+	&:disabled {
+		filter: contrast(.5) grayscale(.5);
+		cursor: not-allowed;
+	}
+}

@@ -1,0 +1,73 @@
+@import '/styles/variables';
+
+.accordion {
+	display: flex;
+	flex-direction: column;
+	width: min(100%, 30rem);
+}
+
+.accordionItem {
+	display: flex;
+	flex-direction: column;
+	padding: $smallPadding 0;
+}
+
+.accordionHead {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.accordionCrossButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 2.2rem;
+	height: 2.2rem;
+
+	@include cubicTransition(0.33s);
+	&:hover:not(:disabled) {
+		@include buttonCommonHover(1.1, 0.9);
+		@include cubicTransition(0.25s);
+	}
+	&:active:not(:disabled) {
+		@include buttonCommonHover(1.2, 0.8);
+		@include cubicTransition(0.1s);
+	}
+}
+
+.crossButtonStick {
+	width: 56%;
+	height: .2rem;
+	background: $black;
+	position: absolute;
+	border-radius: 1000rem;
+}
+
+.accordionTitle {
+}
+
+.accordionContent {
+	overflow: hidden;
+	width: 100%;
+}
+
+.accordionContentWrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.accordionInnerContent {
+	text-indent: 1.5rem;
+	text-align: justify;
+	width: 100%;
+}
+
+.accordionBorder {
+	height: 0.1rem;
+	background: $black;
+	border-radius: 2rem;
+}

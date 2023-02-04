@@ -1,0 +1,12 @@
+@import 'styles/variables';
+
+.button {
+	@include cubicTransition(0.33s);
+	&:hover {
+		@include buttonCommonHover(1.1, 0.9);
+	}
+	&:active {
+		@include buttonCommonHover(1.2, 0.8);
+		@include cubicTransition(0.15s);
+	}
+}

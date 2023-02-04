@@ -1,0 +1,52 @@
+@import 'variables';
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: $sansFont;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 110%;
+	letter-spacing: -0.05em;
+	text-rendering: geometricPrecision;
+}
+
+html,
+body,
+#__next {
+	width: 100%;
+	min-height: 100%;
+}
+
+html {
+	font-size: 20px;
+}
+
+::selection {
+	background: $yellow;
+	color: $charcoal;
+}
+
+button,
+input,
+textarea {
+	background: none;
+	border: none;
+	outline: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+textarea {
+	resize: none;
+}
+
+.icon {
+	width: 1.2rem;
+	height: 1.2rem;
+	margin: 0.5rem;
+}

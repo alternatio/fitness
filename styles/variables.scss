@@ -1,0 +1,44 @@
+// colors
+$black: #000;
+$charcoal: #222;
+$gray: #aaa;
+$preWhite: #f8f8f8;
+$white: #fff;
+$blue: #01f;
+$cyan: #0ef;
+$preGreen: #0f8;
+$purple: #a0f;
+$pink: #f06;
+$red: #f00;
+$orange: #f60;
+$yellow: #fe0;
+
+// sizes
+$smallPadding: 0.5rem;
+$mediumPadding: 0.75rem;
+$largePadding: 1rem;
+$extraLargePadding: 2rem;
+
+$smallBorderRadius: 0.3rem;
+$mediumBorderRadius: 0.5rem;
+$largeBorderRadius: 1rem;
+
+$maxWidthWrapper: 90rem;
+
+// fonts
+$monoFont: 'JetBrains Mono', monospace;
+$sansFont: 'NeueMachina', sans-serif;
+
+// transitions
+@mixin cubicTransition($duration) {
+	transition: $duration cubic-bezier(0.35, 0.35, 0.2, 1);
+}
+
+// hovers
+@mixin buttonCommonHover(
+	$x: 1.05,
+	$y: 0.95,
+	$otherTransforms: rotate(0)
+) {
+	transform: scaleX($x) scaleY($y) $otherTransforms;
+}
