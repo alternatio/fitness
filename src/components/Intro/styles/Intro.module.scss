@@ -1,0 +1,50 @@
+@import 'styles/variables';
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 70vh;
+  position: relative;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  span {
+    font-size: clamp(1rem, 7vw, 3rem);
+    text-align: center;
+    font-weight: 700;
+    color: $white;
+  }
+  z-index: 1;
+  position: relative;
+}
+
+.description {
+  max-width: 25rem;
+  text-align: center;
+  color: $gray;
+  opacity: .9;
+  text-shadow: 0 .2rem .4rem rgba($white, .35);
+  font-weight: 400;
+  z-index: 1;
+  position: relative;
+}
+
+.cube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: .5;
+  }
+}

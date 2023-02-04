@@ -1,0 +1,32 @@
+@import '/styles/variables';
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: $mediumPadding 0;
+  background: rgba($black, .5);
+  backdrop-filter: blur(.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: $bigFontSize;
+  font-weight: 700;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.link {
+  @include cubicTransition(.2s);
+  border-bottom: transparent solid .1rem;
+  &:hover {
+    border-bottom: $white solid .1rem;
+  }
+}

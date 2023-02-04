@@ -27,7 +27,12 @@ $maxWidthWrapper: 90rem;
 
 // fonts
 $monoFont: 'JetBrains Mono', monospace;
-$sansFont: 'NeueMachina', sans-serif;
+$sansFont: 'Neue Machina', sans-serif;
+
+$smallFontSize: .9rem;
+$commonFontSize: 1rem;
+$mediumFontSize: 1.2rem;
+$bigFontSize: 1.6rem;
 
 // transitions
 @mixin cubicTransition($duration) {

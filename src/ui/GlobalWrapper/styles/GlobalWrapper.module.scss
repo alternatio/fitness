@@ -9,8 +9,9 @@
 
 .innerWrapper {
   width: min(100%, $maxWidthWrapper);
-  padding: $mediumPadding;
+  padding: 0 $mediumPadding;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
 }
