@@ -11,7 +11,7 @@ const Home: NextPage = () => {
 		<GlobalWrapper>
 			<Header />
 			<Intro />
-			<Table />
+			<Table ok={'1872487'}/>
 		</GlobalWrapper>
 	)
 }

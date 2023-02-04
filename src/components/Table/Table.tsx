@@ -5,10 +5,12 @@ import Accordion from "../../ui/Accordion/Accordion";
 import AccordionItem from "../../ui/Accordion/AccordionItem";
 
 interface TableProps {
-
+  ok: string
 }
 
 const Table: NextPage<TableProps> = props => {
+  console.log(props.ok)
+
   return (
     <div className={style.table}>
       <Accordion>
