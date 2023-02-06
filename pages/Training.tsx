@@ -17,6 +17,8 @@ const Training: NextPage = () => {
 							<motion.div layout={'size'}
 								className={style.block}>
 								{value.title}
+								<span>{value.description}</span>
+								<span>{value.steps}</span>
 							</motion.div>
 						)
 					})}

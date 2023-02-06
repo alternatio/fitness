@@ -17,7 +17,7 @@ const Header: NextPage<HeaderProps> = props => {
       <Link className={style.link} href={'/'}>
           Главная
         </Link>
-        <Link className={style.link} href={'/training'}>
+        <Link className={style.link} href={'/Training'}>
           Программы тренировок
         </Link>
         <Link className={style.link} href={'#'}>

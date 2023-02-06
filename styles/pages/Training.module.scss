@@ -11,14 +11,19 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: min(100%, 40rem);
+  width: min(100%, 100rem);
   gap: .5rem;
 }
 
 .block {
-  width: 11rem;
+  width: 30rem;
   background: $white;
   padding: 1rem;
   color: $black;
   border-radius: .5rem;
+  display: flex;
+  
+  *{
+    color: black;
+  }
 }
