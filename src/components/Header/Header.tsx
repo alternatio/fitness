@@ -14,7 +14,10 @@ const Header: NextPage<HeaderProps> = props => {
         SportD
       </div>
       <nav className={style.navigation}>
-        <Link className={style.link} href={'#'}>
+      <Link className={style.link} href={'/'}>
+          Главная
+        </Link>
+        <Link className={style.link} href={'/training'}>
           Программы тренировок
         </Link>
         <Link className={style.link} href={'#'}>

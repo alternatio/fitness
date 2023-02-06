@@ -1,4 +1,3 @@
-import style from '/styles/pages/Home.module.scss'
 import { memo } from 'react'
 import { NextPage } from 'next'
 import GlobalWrapper from '../src/ui/GlobalWrapper/GlobalWrapper'
@@ -11,7 +10,7 @@ const Home: NextPage = () => {
 		<GlobalWrapper>
 			<Header />
 			<Intro />
-			<Table ok={'1872487'}/>
+			<Table />
 		</GlobalWrapper>
 	)
 }
