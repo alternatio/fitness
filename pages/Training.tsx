@@ -15,7 +15,7 @@ const Training: NextPage = () => {
 					{data.map((value, index) => {
 						return (
 							<motion.div layout={'size'}
-								className={style.block}>
+								className={style.block} key={index}>
 								{value.title}
 								<span>{value.description}</span>
 								<span>{value.steps}</span>
