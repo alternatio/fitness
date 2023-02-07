@@ -22,7 +22,8 @@
   color: $black;
   border-radius: .5rem;
   display: flex;
-  
+  align-items: center;
+  flex-direction: column;
   *{
     color: black;
   }
