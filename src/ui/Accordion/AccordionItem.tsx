@@ -3,8 +3,10 @@ import { NextPage } from 'next'
 import { memo, ReactNode, useState } from 'react'
 import style from './styles/Accordion.module.scss'
 import {
-	borderVariants, buttonVariants,
-	contentVariants, contentWrapperVariants,
+	borderVariants,
+	buttonVariants,
+	contentVariants,
+	contentWrapperVariants,
 } from './styles/variants'
 import {
 	commonAnimations,
@@ -33,24 +35,25 @@ const AccordionItem: NextPage<
 					onClick={() =>
 						handleContentVisible(prev => !prev)
 					}>
-					<span className={style.crossButtonStick}/>
+					<span className={style.crossButtonStick} />
 					<motion.span
 						animate={contentIsVisible ? 'on' : 'off'}
-						transition={commonTransition}
+						transition={commonTransition()}
 						variants={buttonVariants}
-						className={style.crossButtonStick}/>
+						className={style.crossButtonStick}
+					/>
 				</button>
 			</div>
 			<AnimatePresence>
 				{contentIsVisible && (
 					<motion.div
 						{...commonAnimations}
-						transition={commonTransition}
+						transition={commonTransition()}
 						variants={contentWrapperVariants}
 						className={style.accordionContentWrapper}>
 						<motion.div
 							{...commonAnimations}
-							transition={commonTransition}
+							transition={commonTransition()}
 							variants={contentVariants}
 							className={style.accordionContent}>
 							<div className={style.accordionInnerContent}>
@@ -60,7 +63,7 @@ const AccordionItem: NextPage<
 
 						<motion.div
 							{...commonAnimations}
-							transition={commonTransition}
+							transition={commonTransition()}
 							variants={borderVariants}
 							className={style.accordionBorder}
 						/>

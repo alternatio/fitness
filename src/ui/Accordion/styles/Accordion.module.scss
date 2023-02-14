@@ -23,8 +23,9 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	width: 2.2rem;
-	height: 2.2rem;
+	min-width: 2.2rem;
+	max-width: 2.2rem;
+	aspect-ratio: 1/1;
 
 	@include cubicTransition(0.33s);
 	&:hover:not(:disabled) {
@@ -38,14 +39,15 @@
 }
 
 .crossButtonStick {
-	width: 56%;
+	width: 50%;
 	height: .2rem;
-	background: $white;
+	background: $black;
 	position: absolute;
 	border-radius: 1000rem;
 }
 
 .accordionTitle {
+	font-weight: 700;
 }
 
 .accordionContent {
@@ -62,12 +64,12 @@
 
 .accordionInnerContent {
 	text-indent: 1.5rem;
-	text-align: justify;
-	width: 100%;
+	text-align: left;
+	width: min(100%, 20rem);
 }
 
 .accordionBorder {
 	height: 0.1rem;
-	background: $white;
+	background: $black;
 	border-radius: 2rem;
 }

@@ -1,0 +1,38 @@
+@import '/styles/variables';
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: .8rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.input {
+  appearance: none;
+  border-radius: 50%;
+  background: $mediumWhite;
+  width: 1rem;
+  aspect-ratio: 1/1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:after {
+    @include cubicTransition(.25s);
+    transform: scale(0);
+    content: '';
+    position: absolute;
+    background: $black;
+    border-radius: 50%;
+    width: .6rem;
+    aspect-ratio: 1/1;
+  }
+  &:checked:after {
+    transform: scale(1);
+  }
+}

@@ -4,6 +4,7 @@ import GlobalWrapper from '../src/ui/GlobalWrapper/GlobalWrapper'
 import Header from "../src/components/Header/Header";
 import Intro from "../src/components/Intro/Intro";
 import Table from "../src/components/Table/Table";
+import Footer from "../src/components/Footer/Footer";
 
 const Home: NextPage = () => {
 	return (
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
 			<Header />
 			<Intro />
 			<Table />
+			<Footer />
 		</GlobalWrapper>
 	)
 }

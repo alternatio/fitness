@@ -1,0 +1,13 @@
+@import 'styles/variables';
+
+.label {
+  background: $mediumWhite;
+  padding: $smallPadding $mediumPadding;
+  border-radius: $mediumBorderRadius;
+  cursor: text;
+  max-width: 12rem;
+}
+
+.input {
+  font-size: .85rem;
+}
