@@ -56,7 +56,7 @@ const Training: NextPage = () => {
           <Accordion>
             {currentObject.steps.map((value, index) => {
               return (
-                <AccordionItem title={`Шаг ${index + 1}`}>
+                <AccordionItem key={index} title={`Шаг ${index + 1}`}>
                   {value}
                 </AccordionItem>
               )

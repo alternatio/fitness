@@ -42,6 +42,7 @@ const Header: NextPage<HeaderProps> = props => {
 				{arrayOfLinks.map((link, index) => {
 					return (
 						<Link
+							key={index}
 							onMouseEnter={() => setHoverLink(index)}
 							onMouseLeave={() => setHoverLink(null)}
 							className={style.link}

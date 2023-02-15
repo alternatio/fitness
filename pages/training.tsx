@@ -84,6 +84,7 @@ const Training: NextPage = () => {
 						{arrayOfTextStage.map((text, index) => {
 							return (
 								<InputRadio
+									key={index}
 									name={'stage'}
 									inputValue={index}
 									value={userStage}

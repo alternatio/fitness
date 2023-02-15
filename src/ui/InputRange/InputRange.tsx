@@ -43,9 +43,10 @@ const InputRange: FC<InputRangeProps> = props => {
 					}}
 					className={style.thumb}
 				/>
-				{arrayOfValues.map(value => {
+				{arrayOfValues.map((value, index) => {
 					return (
 						<div
+							key={index}
 							style={{
 								left:
 									-4 +
