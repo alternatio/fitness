@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import { memo } from 'react'
+import {memo, useEffect} from 'react'
 import Head from 'next/head'
 import {arrayOfTextStage, data} from '../../src/components/data/programsData'
 import { useRouter } from 'next/router'
@@ -14,8 +14,7 @@ const Training: NextPage = () => {
 	const router = useRouter()
 	const currentPage = router.query.number as string
   const currentObject = data[+currentPage]
-  const image = require(`../../public/images${currentObject.image}`)
-
+	
 	return (
 		<>
 			<Head>
@@ -27,7 +26,7 @@ const Training: NextPage = () => {
 				<div className={style.content}>
 					<Image
 						className={style.image}
-						src={image}
+						src={require(`../../public/images${currentObject.image}`)}
 						alt={'image'}
 					/>
 					<div className={style.shadow} />
