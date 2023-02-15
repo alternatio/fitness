@@ -1,5 +1,47 @@
 @import '/styles/variables';
 
 .block {
+	width: 100%;
+	@media (min-width: 700px) {
+		width: calc(50% - 0.5rem);
+	}
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: $white;
+  color: $black;
+  border: $black solid .2rem;
+  padding: $mediumPadding;
+  border-radius: $mediumBorderRadius;
+  box-shadow: 0 0 1rem rgba($gray, .3);
+  cursor: pointer;
+  overflow: hidden;
+  @include cubicTransition(.25s);
+  &:hover {
+    transform: scaleX(1.025) translateY(-.2rem);
+  }
+}
 
+.image {
+  width: calc(100% + (2 * $mediumPadding));
+  height: 12rem;
+  object-fit: cover;
+  margin-top: calc(-1 * $mediumPadding);
+  margin-right: calc(-1 * $mediumPadding);
+  margin-left: calc(-1 * $mediumPadding);
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+  & * {
+    font-size: .9rem;
+    font-weight: 400;
+  }
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
 }

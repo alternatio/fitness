@@ -5,15 +5,24 @@ import Header from "../src/components/Header/Header";
 import Intro from "../src/components/Intro/Intro";
 import Table from "../src/components/Table/Table";
 import Footer from "../src/components/Footer/Footer";
+import Head from "next/head";
 
 const Home: NextPage = () => {
 	return (
-		<GlobalWrapper>
-			<Header />
-			<Intro />
-			<Table />
-			<Footer />
-		</GlobalWrapper>
+		<>
+			<Head>
+				<title>
+					Главная
+				</title>
+			</Head>
+
+			<GlobalWrapper>
+				<Header />
+				<Intro />
+				<Table />
+				<Footer />
+			</GlobalWrapper>
+		</>
 	)
 }
 

@@ -23,10 +23,10 @@ const arrayOfLinks: link[] = [
 		title: 'Тренировки',
 		href: '/training',
 	},
-	{
-		title: 'Питание',
-		href: '#',
-	},
+	// {
+	// 	title: 'Питание',
+	// 	href: '#',
+	// },
 ]
 
 const Header: NextPage<HeaderProps> = props => {

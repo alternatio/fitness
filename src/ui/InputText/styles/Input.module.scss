@@ -1,13 +1,18 @@
 @import 'styles/variables';
 
 .label {
-  background: $mediumWhite;
-  padding: $smallPadding $mediumPadding;
-  border-radius: $mediumBorderRadius;
-  cursor: text;
-  max-width: 12rem;
+	background: $mediumWhite;
+	padding: $smallPadding $mediumPadding;
+	border-radius: $mediumBorderRadius;
+	cursor: text;
+	max-width: 12rem;
 }
 
 .input {
-  font-size: .85rem;
+  width: 100%;
+	font-size: 0.85rem;
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		appearance: none;
+	}
 }
