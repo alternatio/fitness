@@ -21,7 +21,7 @@ type hoverLinkT = number | null
 const arrayOfLinks: link[] = [
 	{
 		title: 'Тренировки',
-		href: '/training',
+		href: '/trainings',
 	},
 	// {
 	// 	title: 'Питание',
