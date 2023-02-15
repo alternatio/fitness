@@ -14,7 +14,7 @@ const Training: NextPage = () => {
 	const router = useRouter()
 	const currentPage = router.query.number as string
   const currentObject = data[+currentPage]
-  const image = require(`/public/images/${currentObject.image}`)
+  const image = require(`../../public/images${currentObject.image}`)
 
 	return (
 		<>
