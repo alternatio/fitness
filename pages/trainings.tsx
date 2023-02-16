@@ -20,7 +20,7 @@ interface searchI {
 	purpose: purposeT[]
 }
 
-const Training: NextPage = () => {
+const Trainings: NextPage = () => {
 	const [userStage, setUserStage] = useState<number>(0)
 	const [userHeight, setUserHeight] = useState<string>('')
 	const [userWeight, setUserWeight] = useState<string>('')
@@ -161,4 +161,4 @@ const Training: NextPage = () => {
 	)
 }
 
-export default memo(Training)
+export default memo(Trainings)
