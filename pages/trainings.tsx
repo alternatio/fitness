@@ -14,6 +14,7 @@ import InputText from '../src/ui/InputText/InputText'
 import InputRadio from '../src/ui/InputRadio/InputRadio'
 import Head from 'next/head'
 import Footer from '../src/components/Footer/Footer'
+import { motion } from 'framer-motion'
 
 interface searchI {
 	stage: stageT
@@ -121,7 +122,7 @@ const Trainings: NextPage = () => {
 				</div>
 
 				<div className={style.trainingListWrapper}>
-					<div className={style.trainingsList}>
+					<motion.div layout={true} className={style.trainingsList}>
 						{!search &&
 							data.map((value, index) => {
 								return (
@@ -152,7 +153,7 @@ const Trainings: NextPage = () => {
 										/>
 									)
 								})}
-					</div>
+					</motion.div>
 				</div>
 
 				<Footer />
