@@ -8,6 +8,7 @@ import {
 	data,
 	purposeT,
 	stageT,
+	genderT
 } from '../src/components/data/programsData'
 import TrainingBlock from '../src/components/TrainingBlock/TrainingBlock'
 import InputText from '../src/ui/InputText/InputText'
@@ -15,16 +16,19 @@ import InputRadio from '../src/ui/InputRadio/InputRadio'
 import Head from 'next/head'
 import Footer from '../src/components/Footer/Footer'
 import { motion } from 'framer-motion'
+import {arrayOfTextGender} from "../src/components/data/dietsData";
 
 interface searchI {
 	stage: stageT
 	purpose: purposeT[]
+	gender: genderT
 }
 
 const Trainings: NextPage = () => {
 	const [userStage, setUserStage] = useState<number>(0)
 	const [userHeight, setUserHeight] = useState<string>('')
 	const [userWeight, setUserWeight] = useState<string>('')
+	const [userGender, setUserGender] = useState<number>(0)
 	const [search, setSearch] = useState<searchI>()
 
 	const getBodyMassIndex = () => {
@@ -68,6 +72,7 @@ const Trainings: NextPage = () => {
 
 		return {
 			stage: userStage as stageT,
+			gender: userGender as genderT,
 			purpose,
 		}
 	}
@@ -90,6 +95,34 @@ const Trainings: NextPage = () => {
 									inputValue={index}
 									value={userStage}
 									setValue={setUserStage}>
+									{text}
+								</InputRadio>
+							)
+						})}
+					</div>
+					<div className={style.years}>
+						{arrayOfTextGender.map((text, index) => {
+							return (
+								<InputRadio
+									key={index}
+									name={'gender'}
+									inputValue={index}
+									value={userGender}
+									setValue={setUserGender}>
+									{text}
+								</InputRadio>
+							)
+						})}
+					</div>
+					<div className={style.years}>
+						{arrayOfTextGender.map((text, index) => {
+							return (
+								<InputRadio
+									key={index}
+									name={'gender'}
+									inputValue={index}
+									value={userGender}
+									setValue={setUserGender}>
 									{text}
 								</InputRadio>
 							)
@@ -138,6 +171,7 @@ const Trainings: NextPage = () => {
 							data
 								.filter(
 									obj =>
+										obj.gender === arrayOfTextGender[search.gender] &&
 										obj.stage === search.stage &&
 										search.purpose.find(
 											el => el === obj.purpose

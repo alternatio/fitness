@@ -5,6 +5,7 @@ export type purposeT =
 	| 'Увеличение выносливости'
 
 export type stageT = 0 | 1 | 2 | 3
+export type genderT = 0 | 1
 
 export interface programI {
 	title: string
@@ -13,6 +14,7 @@ export interface programI {
 	description: string
 	steps: string[]
 	image: string
+	gender: string
 }
 
 export const arrayOfTextStage: string[] = [
@@ -31,6 +33,7 @@ export const data: programI[] = [
 		purpose: 'Набор массы',
 		steps: ['Приседания с гантелями 3 подхода по 10 раз'],
 		image: 'img0.png',
+		gender: 'мужской'
 	},
 	{
 		title: 'Тренируйся как Раян Гослинг',
@@ -42,6 +45,7 @@ export const data: programI[] = [
 			'Бег на беговой дорожке 30-50 минут на средней скорости.',
 		],
 		image: 'img1.png',
+		gender: 'мужской'
 	},
 	{
 		title: 'Кардио с элементами гимнастики',
@@ -54,6 +58,7 @@ export const data: programI[] = [
 			'Разминка с резиной',
 		],
 		image: 'img2.png',
+		gender: 'мужской'
 	},
 	{
 		title: 'Тренировка тяжеловеса',
@@ -65,6 +70,7 @@ export const data: programI[] = [
 			'Разогрев с малыми весами',
 		],
 		image: 'img3.png',
+		gender: 'мужской'
 	},
 	{
 		title: 'Пампинг тренировка',
@@ -76,6 +82,7 @@ export const data: programI[] = [
 			'Сведение рук в кроссовере, 15-20 повторений по 4 подхода.',
 		],
 		image: 'img4.png',
+		gender: 'мужской'
 	},
 	{
 		title: 'TRX продвинутый уровень',
@@ -87,6 +94,7 @@ export const data: programI[] = [
 			'Приседания с петлями, 20 повторений по 4 подхода',
 		],
 		image: 'img5.png',
+		gender: 'мужской'
 	},
 	{
 		title: 'Работа на всё тело со своим весом',
@@ -98,6 +106,7 @@ export const data: programI[] = [
 			'Подъем ног в висе, до отказа, 3 подхода.',
 		],
 		image: 'img6.png',
+		gender: 'мужской'
 	},
 	{
 		title: 'Crossfit',
@@ -109,5 +118,18 @@ export const data: programI[] = [
 			'Отжимания от пола, 15 повторений, 4 подхода..',
 		],
 		image: 'img7.png',
+		gender: 'мужской'
 	},
+	{
+		title: 'Женская тренировка',
+		description: 'Программа рассчитана как для новичков.',
+		stage: 1,
+		purpose: 'Увеличение выносливости',
+		steps: [
+			'Общая разминка, выполнять не менее 5 минут.',
+			'Отжимания от пола, 15 повторений, 4 подхода..',
+		],
+		image: 'img7.png',
+		gender: 'женский'
+	}
 ]
