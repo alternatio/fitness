@@ -8,7 +8,7 @@ import {
 	data,
 	purposeT,
 	stageT,
-	genderT
+	genderT,
 } from '../src/components/data/programsData'
 import TrainingBlock from '../src/components/TrainingBlock/TrainingBlock'
 import InputText from '../src/ui/InputText/InputText'
@@ -16,7 +16,7 @@ import InputRadio from '../src/ui/InputRadio/InputRadio'
 import Head from 'next/head'
 import Footer from '../src/components/Footer/Footer'
 import { motion } from 'framer-motion'
-import {arrayOfTextGender} from "../src/components/data/dietsData";
+import { arrayOfTextGender } from '../src/components/data/dietsData'
 
 interface searchI {
 	stage: stageT
@@ -114,20 +114,6 @@ const Trainings: NextPage = () => {
 							)
 						})}
 					</div>
-					<div className={style.years}>
-						{arrayOfTextGender.map((text, index) => {
-							return (
-								<InputRadio
-									key={index}
-									name={'gender'}
-									inputValue={index}
-									value={userGender}
-									setValue={setUserGender}>
-									{text}
-								</InputRadio>
-							)
-						})}
-					</div>
 					<div className={style.textInputs}>
 						<InputText
 							value={userHeight}
@@ -155,7 +141,9 @@ const Trainings: NextPage = () => {
 				</div>
 
 				<div className={style.trainingListWrapper}>
-					<motion.div layout={true} className={style.trainingsList}>
+					<motion.div
+						layout={true}
+						className={style.trainingsList}>
 						{!search &&
 							data.map((value, index) => {
 								return (
@@ -171,7 +159,8 @@ const Trainings: NextPage = () => {
 							data
 								.filter(
 									obj =>
-										obj.gender === arrayOfTextGender[search.gender] &&
+										obj.gender ===
+											arrayOfTextGender[search.gender] &&
 										obj.stage === search.stage &&
 										search.purpose.find(
 											el => el === obj.purpose
