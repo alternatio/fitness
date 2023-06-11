@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { NextPage } from 'next'
+import Image from 'next/image'
 import { memo, ReactNode, useState } from 'react'
 import style from './styles/Accordion.module.scss'
 import {
@@ -17,6 +18,8 @@ interface AccordionItemProps {
 	children?: ReactNode
 	title?: string
 }
+
+import src from '/public/images/step.jpg'
 
 const AccordionItem: NextPage<
 	AccordionItemProps
@@ -51,16 +54,18 @@ const AccordionItem: NextPage<
 						transition={commonTransition()}
 						variants={contentWrapperVariants}
 						className={style.accordionContentWrapper}>
-						<motion.div
-							{...commonAnimations}
-							transition={commonTransition()}
-							variants={contentVariants}
-							className={style.accordionContent}>
-							<div className={style.accordionInnerContent}>
-								{props.children}
-							</div>
-						</motion.div>
-
+						<div className={style.div}>
+							<motion.div
+								{...commonAnimations}
+								transition={commonTransition()}
+								variants={contentVariants}
+								className={style.accordionContent}>
+								<div
+									className={style.accordionInnerContent}>
+									{props.children}
+								</div>
+							</motion.div>
+						</div>
 						<motion.div
 							{...commonAnimations}
 							transition={commonTransition()}

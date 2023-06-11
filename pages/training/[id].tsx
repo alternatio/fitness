@@ -15,7 +15,7 @@ import AccordionItem from '../../src/ui/Accordion/AccordionItem'
 
 export async function getStaticPaths() {
 	const paths = data.map((post, index) => ({
-		params: { id: index+'' },
+		params: { id: index + '' },
 	}))
 	return { paths, fallback: false }
 }
@@ -80,7 +80,15 @@ const Training: NextPage = () => {
 									<AccordionItem
 										key={index}
 										title={`Шаг ${index + 1}`}>
-										{value}
+										<p>value.title</p>
+										{value.src && (
+											<Image
+												src={value.src}
+												alt=''
+												width={50}
+												height={50}
+											/>
+										)}
 									</AccordionItem>
 								)
 							})}

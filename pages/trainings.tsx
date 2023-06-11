@@ -156,15 +156,18 @@ const Trainings: NextPage = () => {
 								)
 							})}
 						{search &&
-							data.filter(
-								obj =>
+							data.filter(obj => {
+								console.log(obj.purpose, search.purpose)
+
+								return (
 									obj.gender ===
 										arrayOfTextGender[search.gender] &&
 									obj.stage === search.stage &&
 									search.purpose.find(
 										el => el === obj.purpose
 									)
-							).length === 0 &&
+								)
+							}).length === 0 &&
 							'Ничего не найдено'}
 						{search &&
 							data
