@@ -27,6 +27,10 @@ const arrayOfLinks: link[] = [
 		title: 'Питание',
 		href: '/diets',
 	},
+	{
+		title: 'О нас',
+		href: '/about',
+	},
 ]
 
 const Header: NextPage<HeaderProps> = props => {
@@ -55,7 +59,7 @@ const Header: NextPage<HeaderProps> = props => {
 									<motion.div
 										variants={linkBackgroundVariants}
 										{...commonAnimations}
-										transition={commonTransition(.2)}
+										transition={commonTransition(0.2)}
 										layoutId={'background'}
 										className={style.linkHoverBackground}
 									/>

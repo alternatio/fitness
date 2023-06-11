@@ -1,0 +1,43 @@
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+        align-items: end;
+    }
+}
+
+.heading {
+    font-size: 2.5rem;
+
+    @media (min-width: 768px) {
+        font-size: 3.5rem;
+    }
+}
+
+.description {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    width: min(100%, 60ch);
+    text-align: center;
+
+    @media (min-width: 768px) {
+        text-align: end;
+    }
+}
+
+.paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: min(100%, 100ch);
+}
+
+.paragraphs p {
+    font-size: 1.25rem;
+}

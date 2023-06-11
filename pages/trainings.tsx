@@ -156,6 +156,17 @@ const Trainings: NextPage = () => {
 								)
 							})}
 						{search &&
+							data.filter(
+								obj =>
+									obj.gender ===
+										arrayOfTextGender[search.gender] &&
+									obj.stage === search.stage &&
+									search.purpose.find(
+										el => el === obj.purpose
+									)
+							).length === 0 &&
+							'Ничего не найдено'}
+						{search &&
 							data
 								.filter(
 									obj =>
@@ -167,6 +178,8 @@ const Trainings: NextPage = () => {
 										)
 								)
 								.map((value, index) => {
+									console.log(value)
+
 									return (
 										<TrainingBlock
 											key={index}

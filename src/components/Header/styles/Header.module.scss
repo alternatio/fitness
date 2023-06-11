@@ -13,16 +13,23 @@
   justify-content: space-between;
   z-index: 30;
   width: calc(100% + 1.5rem);
+  gap: .5rem;
 }
 
 .logo {
-  font-size: $bigFontSize;
+  font-size: 1.25rem;
   font-weight: 700;
+
+  @media (min-width: 768px) {
+    font-size: 1.75rem;
+  }
 }
 
 .navigation {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: end;
 }
 
 .link {
