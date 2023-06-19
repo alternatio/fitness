@@ -80,7 +80,7 @@ const Training: NextPage = () => {
 									<AccordionItem
 										key={index}
 										title={`Шаг ${index + 1}`}>
-										<p>value.title</p>
+										<p>{value.title}</p>
 										{value.src && (
 											<Image
 												src={value.src}
