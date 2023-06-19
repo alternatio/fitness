@@ -9,13 +9,13 @@ interface FooterProps {
 const Footer: FC<FooterProps> = props => {
   return (
 		<div className={style.footer}>
-      <Link className={style.link} href={''}>
+      <Link className={style.link} href={'#'}>
         VK
       </Link>
-      <Link className={style.link} href={''}>
+      <Link className={style.link} href={'#'}>
         Telegram
       </Link>
-      <Link className={style.link} href={''}>
+      <Link className={style.link} href={'#'}>
         Discord
       </Link>
 		</div>
